@@ -12,8 +12,9 @@ package parse
 
 import (
 	"bytes"
-	"github.com/88250/lute/html"
 	"unicode/utf8"
+
+	"github.com/88250/lute/html"
 
 	"github.com/88250/lute/ast"
 	"github.com/88250/lute/lex"
@@ -153,7 +154,7 @@ var (
 
 	// validAutoLinkDomainSuffix 作为 GFM 自动连接解析时校验域名后缀用。
 	validAutoLinkDomainSuffix = [][]byte{util.StrToBytes("top"), util.StrToBytes("com"), util.StrToBytes("net"), util.StrToBytes("org"), util.StrToBytes("edu"), util.StrToBytes("gov"),
-		util.StrToBytes("cn"), util.StrToBytes("io"), util.StrToBytes("me"), util.StrToBytes("biz"), util.StrToBytes("co"), util.StrToBytes("live"), util.StrToBytes("pro"), util.StrToBytes("xyz"),
+		util.StrToBytes("cn"), util.StrToBytes("fan"), util.StrToBytes("io"), util.StrToBytes("me"), util.StrToBytes("biz"), util.StrToBytes("co"), util.StrToBytes("live"), util.StrToBytes("pro"), util.StrToBytes("xyz"),
 		util.StrToBytes("win"), util.StrToBytes("club"), util.StrToBytes("tv"), util.StrToBytes("wiki"), util.StrToBytes("site"), util.StrToBytes("tech"), util.StrToBytes("space"), util.StrToBytes("cc"),
 		util.StrToBytes("name"), util.StrToBytes("social"), util.StrToBytes("band"), util.StrToBytes("pub"), util.StrToBytes("info")}
 )
@@ -220,7 +221,7 @@ func (t *Tree) parseGFMAutoLink0(node *ast.Node) {
 		j = i
 		for ; j < length; j++ {
 			token = tokens[j]
-			if (lex.IsWhitespace(token) || lex.ItemLess == token) || (!lex.IsASCIIPunct(token) && !lex.IsASCIILetterNum(token)) {
+			if lex.IsWhitespace(token) || lex.ItemLess == token {
 				break
 			}
 			url = append(url, token)
@@ -329,12 +330,12 @@ func (t *Tree) parseGFMAutoLink0(node *ast.Node) {
 					if 3 <= len(entity) {
 						// 检查截取的子串是否满足实体特征（&;中间需要是字母或数字）
 						isEntity := true
-						for j = 1; j < len(entity)-1; j++ {
-							if !lex.IsASCIILetterNum(entity[j]) {
-								isEntity = false
-								break
-							}
-						}
+						// for j = 1; j < len(entity)-1; j++ {
+						// 	if !lex.IsASCIILetterNum(entity[j]) {
+						// 		isEntity = false
+						// 		break
+						// 	}
+						// }
 						if isEntity {
 							path = path[:l]
 							trimmed = true
@@ -393,6 +394,9 @@ func (t *Tree) isValidDomain(domain []byte) bool {
 	segments := lex.Split(domain, '.')
 	length := len(segments)
 	if 2 > length { // 域名至少被 . 分隔为两部分，小于两部分的话不合法
+		if bytes.Equal(domain, util.StrToBytes("localhost")) {
+			return true
+		}
 		return false
 	}
 
