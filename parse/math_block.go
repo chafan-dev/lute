@@ -13,9 +13,9 @@ package parse
 import (
 	"bytes"
 
-	"github.com/88250/lute/ast"
-	"github.com/88250/lute/lex"
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute/ast"
+	"github.com/chafan-dev/lute/lex"
+	"github.com/chafan-dev/lute/util"
 )
 
 // MathBlockStart 判断数学公式块（$$）是否开始。

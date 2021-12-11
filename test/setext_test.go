@@ -13,7 +13,7 @@ package test
 import (
 	"testing"
 
-	"github.com/88250/lute"
+	"github.com/chafan-dev/lute"
 )
 
 var setextTests = []parseTest{
@@ -32,7 +32,7 @@ func TestSetext(t *testing.T) {
 	}
 }
 
-var setextDisableTests = []parseTest {
+var setextDisableTests = []parseTest{
 	{"0", "foo\n---\n", "<p>foo</p>\n<hr />\n"},
 }
 

@@ -14,9 +14,9 @@ import (
 	"bytes"
 	"strconv"
 
-	"github.com/88250/lute/ast"
-	"github.com/88250/lute/lex"
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute/ast"
+	"github.com/chafan-dev/lute/lex"
+	"github.com/chafan-dev/lute/util"
 )
 
 // ListStart 判断列表、列表项（* - + 1.）或者任务列表项是否开始。

@@ -13,7 +13,7 @@ package test
 import (
 	"testing"
 
-	"github.com/88250/lute"
+	"github.com/chafan-dev/lute"
 )
 
 var headingIDTests = []parseTest{

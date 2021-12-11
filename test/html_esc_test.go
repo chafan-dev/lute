@@ -13,7 +13,7 @@ package test
 import (
 	"testing"
 
-	"github.com/88250/lute/html"
+	"github.com/chafan-dev/lute/html"
 )
 
 func TestEscapeAttrVal(t *testing.T) {

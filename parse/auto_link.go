@@ -14,10 +14,10 @@ import (
 	"bytes"
 	"unicode/utf8"
 
-	"github.com/88250/lute/ast"
-	"github.com/88250/lute/html"
-	"github.com/88250/lute/lex"
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute/ast"
+	"github.com/chafan-dev/lute/html"
+	"github.com/chafan-dev/lute/lex"
+	"github.com/chafan-dev/lute/util"
 )
 
 func (t *Tree) parseGFMAutoEmailLink(node *ast.Node) {
@@ -347,7 +347,7 @@ func (t *Tree) parseGFMAutoLink0(node *ast.Node) {
 
 			// 如果之前的 ) 或者 ; 没有命中处理，则进行结尾的标点符号规则处理，即标点不计入链接，需要剔掉
 			if !trimmed && lex.IsASCIIPunct(lastToken) && lex.ItemSlash != lastToken &&
-				'}' != lastToken && '{' != lastToken /* 自动链接解析结尾 } 问题 https://github.com/88250/lute/issues/4 */ {
+				'}' != lastToken && '{' != lastToken /* 自动链接解析结尾 } 问题 https://github.com/chafan-dev/lute/issues/4 */ {
 				path = path[:length-1]
 				i--
 			}
@@ -371,7 +371,7 @@ func (t *Tree) parseGFMAutoLink0(node *ast.Node) {
 		addr = append(addr, path...)
 		linkText := addr
 		if bytes.HasPrefix(linkText, []byte("https://github.com/")) && bytes.Contains(linkText, []byte("/issues/")) {
-			// 优化 GitHub Issues 自动链接文本 https://github.com/88250/lute/issues/161
+			// 优化 GitHub Issues 自动链接文本 https://github.com/chafan-dev/lute/issues/161
 			repo := linkText[len("https://github.com/"):]
 			repo = repo[:bytes.Index(repo, []byte("/issues/"))]
 			num := bytes.Split(linkText, []byte("/issues/"))[1]

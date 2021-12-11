@@ -12,12 +12,13 @@ package render
 
 import (
 	"bytes"
-	"github.com/88250/lute/html"
 	"strings"
 
-	"github.com/88250/lute/ast"
-	"github.com/88250/lute/parse"
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute/html"
+
+	"github.com/chafan-dev/lute/ast"
+	"github.com/chafan-dev/lute/parse"
+	"github.com/chafan-dev/lute/util"
 )
 
 func EChartsMindmapStr(listContent string) string {

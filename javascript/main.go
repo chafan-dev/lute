@@ -11,11 +11,11 @@
 package main
 
 import (
-	"github.com/88250/lute"
-	"github.com/88250/lute/ast"
-	"github.com/88250/lute/html"
-	"github.com/88250/lute/render"
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute"
+	"github.com/chafan-dev/lute/ast"
+	"github.com/chafan-dev/lute/html"
+	"github.com/chafan-dev/lute/render"
+	"github.com/chafan-dev/lute/util"
 	"github.com/gopherjs/gopherjs/js"
 )
 

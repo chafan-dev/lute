@@ -13,7 +13,7 @@ package render
 import (
 	"bytes"
 
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute/util"
 )
 
 func (r *BaseRenderer) LinkPath(dest []byte) []byte {

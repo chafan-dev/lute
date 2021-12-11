@@ -11,8 +11,9 @@
 package test
 
 import (
-	"github.com/88250/lute"
 	"testing"
+
+	"github.com/chafan-dev/lute"
 )
 
 var linkBaseTests = []parseTest{

@@ -17,9 +17,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/88250/lute/html"
-	"github.com/88250/lute/lex"
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute/html"
+	"github.com/chafan-dev/lute/lex"
+	"github.com/chafan-dev/lute/util"
 )
 
 // Node 描述了节点结构。
@@ -720,7 +720,7 @@ const (
 	NodeYamlFrontMatterContent     NodeType = 427 // YAML Front Matter 内容
 	NodeYamlFrontMatterCloseMarker NodeType = 428 // 结束 YAML Front Matter 标记符 ---
 
-	// 内容块引用（Block Reference） https://github.com/88250/lute/issues/82
+	// 内容块引用（Block Reference） https://github.com/chafan-dev/lute/issues/82
 
 	NodeBlockRef            NodeType = 430 // 内容块引用节点
 	NodeBlockRefID          NodeType = 431 // 被引用的内容块（定义块）ID
@@ -728,7 +728,7 @@ const (
 	NodeBlockRefText        NodeType = 433 // 内容块引用锚文本
 	NodeBlockRefDynamicText NodeType = 434 // 内容块引用动态锚文本
 
-	// ==Mark== 标记语法 https://github.com/88250/lute/issues/84
+	// ==Mark== 标记语法 https://github.com/chafan-dev/lute/issues/84
 
 	NodeMark             NodeType = 450 // 标记
 	NodeMark1OpenMarker  NodeType = 451 // 开始标记标记符 =
@@ -736,32 +736,32 @@ const (
 	NodeMark2OpenMarker  NodeType = 453 // 开始标记标记符 ==
 	NodeMark2CloseMarker NodeType = 454 // 结束标记标记符 ==
 
-	// kramdown 内联属性列表 https://github.com/88250/lute/issues/89 and https://github.com/88250/lute/issues/118
+	// kramdown 内联属性列表 https://github.com/chafan-dev/lute/issues/89 and https://github.com/chafan-dev/lute/issues/118
 
 	NodeKramdownBlockIAL NodeType = 455 // 块级内联属性列表 {: name="value"}
 	NodeKramdownSpanIAL  NodeType = 456 // 行级内联属性列表 *foo*{: name="value"}bar
 
-	// #Tag# 标签语法 https://github.com/88250/lute/issues/92
+	// #Tag# 标签语法 https://github.com/chafan-dev/lute/issues/92
 
 	NodeTag            NodeType = 460 // 标签
 	NodeTagOpenMarker  NodeType = 461 // 开始标签标记符 #
 	NodeTagCloseMarker NodeType = 462 // 结束标签标记符 #
 
-	// 内容块查询嵌入（Block Query Embed）语法 https://github.com/88250/lute/issues/96
+	// 内容块查询嵌入（Block Query Embed）语法 https://github.com/chafan-dev/lute/issues/96
 
 	NodeBlockQueryEmbed       NodeType = 465 // 内容块查询嵌入
 	NodeOpenBrace             NodeType = 466 // {
 	NodeCloseBrace            NodeType = 467 // }
 	NodeBlockQueryEmbedScript NodeType = 468 // 内容块查询嵌入脚本
 
-	// 超级块语法 https://github.com/88250/lute/issues/111
+	// 超级块语法 https://github.com/chafan-dev/lute/issues/111
 
 	NodeSuperBlock             NodeType = 475 // 超级块节点
 	NodeSuperBlockOpenMarker   NodeType = 476 // 开始超级块标记符 {{{
 	NodeSuperBlockLayoutMarker NodeType = 477 // 超级块布局 row/col
 	NodeSuperBlockCloseMarker  NodeType = 478 // 结束超级块标记符 }}}
 
-	// 上标下标语法 https://github.com/88250/lute/issues/113
+	// 上标下标语法 https://github.com/chafan-dev/lute/issues/113
 
 	NodeSup            NodeType = 485 // 上标
 	NodeSupOpenMarker  NodeType = 486 // 开始上标标记符 ^
@@ -770,7 +770,7 @@ const (
 	NodeSubOpenMarker  NodeType = 491 // 开始下标标记符 ~
 	NodeSubCloseMarker NodeType = 492 // 结束下标标记符 ~
 
-	// Git 冲突标记 https://github.com/88250/lute/issues/131
+	// Git 冲突标记 https://github.com/chafan-dev/lute/issues/131
 
 	NodeGitConflict            NodeType = 495 // Git 冲突标记
 	NodeGitConflictOpenMarker  NodeType = 496 // 开始 Git 冲突标记标记符 <<<<<<<
@@ -815,7 +815,7 @@ const (
 
 	NodeWidget NodeType = 535 // <iframe data-type="NodeWidget" data-subtype="widget"></iframe>
 
-	// 文件注解引用 https://github.com/88250/lute/issues/155
+	// 文件注解引用 https://github.com/chafan-dev/lute/issues/155
 
 	NodeFileAnnotationRef      NodeType = 540 // 文件注解引用节点
 	NodeFileAnnotationRefID    NodeType = 541 // 被引用的文件注解 ID（file/annotation）

@@ -11,11 +11,12 @@
 package html
 
 import (
-	"github.com/88250/lute/lex"
-	"github.com/88250/lute/util"
 	"strconv"
 	"strings"
 	"unicode/utf8"
+
+	"github.com/chafan-dev/lute/lex"
+	"github.com/chafan-dev/lute/util"
 )
 
 func UnescapeBytes(tokens []byte) (ret []byte) {

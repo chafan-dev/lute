@@ -13,8 +13,8 @@ package test
 import (
 	"testing"
 
-	"github.com/88250/lute"
-	"github.com/88250/lute/ast"
+	"github.com/chafan-dev/lute"
+	"github.com/chafan-dev/lute/ast"
 )
 
 var kramdownBlockIALTests = []parseTest{

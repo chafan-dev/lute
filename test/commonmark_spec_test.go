@@ -16,7 +16,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/88250/lute"
+	"github.com/chafan-dev/lute"
 )
 
 type testcase struct {

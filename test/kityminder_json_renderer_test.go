@@ -11,10 +11,11 @@
 package test
 
 import (
-	"github.com/88250/lute/ast"
 	"testing"
 
-	"github.com/88250/lute"
+	"github.com/chafan-dev/lute/ast"
+
+	"github.com/chafan-dev/lute"
 )
 
 var kitymindJSONRendererTests = []parseTest{

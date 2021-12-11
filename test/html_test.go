@@ -14,8 +14,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/88250/lute/html"
-	"github.com/88250/lute/html/atom"
+	"github.com/chafan-dev/lute/html"
+	"github.com/chafan-dev/lute/html/atom"
 )
 
 func TestHTMLParse(t *testing.T) {

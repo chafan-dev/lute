@@ -15,12 +15,12 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/88250/lute/ast"
-	"github.com/88250/lute/html"
-	"github.com/88250/lute/html/atom"
-	"github.com/88250/lute/parse"
-	"github.com/88250/lute/render"
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute/ast"
+	"github.com/chafan-dev/lute/html"
+	"github.com/chafan-dev/lute/html/atom"
+	"github.com/chafan-dev/lute/parse"
+	"github.com/chafan-dev/lute/render"
+	"github.com/chafan-dev/lute/util"
 )
 
 // HTML2Markdown 将 HTML 转换为 Markdown。

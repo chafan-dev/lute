@@ -13,12 +13,12 @@ package render
 import (
 	"strings"
 
-	"github.com/88250/lute/html"
-	"github.com/88250/lute/lex"
+	"github.com/chafan-dev/lute/html"
+	"github.com/chafan-dev/lute/lex"
 
-	"github.com/88250/lute/ast"
-	"github.com/88250/lute/parse"
-	"github.com/88250/lute/util"
+	"github.com/chafan-dev/lute/ast"
+	"github.com/chafan-dev/lute/parse"
+	"github.com/chafan-dev/lute/util"
 )
 
 // JSONRenderer 描述了 JSON 渲染器。

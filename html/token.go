@@ -7,12 +7,13 @@ package html
 import (
 	"bytes"
 	"errors"
-	"github.com/88250/lute/util"
 	"io"
 	"strconv"
 	"strings"
 
-	"github.com/88250/lute/html/atom"
+	"github.com/chafan-dev/lute/util"
+
+	"github.com/chafan-dev/lute/html/atom"
 )
 
 // A TokenType is the type of a Token.
